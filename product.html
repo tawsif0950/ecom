@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>American Tourister Backpack · Cartly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.postimg.cc" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23ff3b6b'/%3E%3Cstop offset='100%25' stop-color='%23ff7a00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='32' y='44' font-family='serif' font-style='italic' font-weight='600' font-size='42' fill='url(%23g)' text-anchor='middle'%3Ec%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left"><span class="pulse"><span class="pulse-dot"></span> Live in Dhaka, Chittagong, Sylhet</span><a href="#">Track your order</a></div>
+      <div class="topbar-right"><a href="#">Sell on Cartly</a><a href="#">Help &amp; Support</a><a href="#">EN · বাংলা</a></div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <a href="index.html" class="brand">cartly</a>
+      <form class="search" onsubmit="event.preventDefault();">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="search-input" type="text" placeholder="Search for products, brands and categories..." />
+        <button class="search-btn" type="submit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>Search</span></button>
+      </form>
+      <div class="header-actions">
+        <a href="#" class="h-link"><span class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><span class="label">Hello<strong>Sign In</strong></span></a>
+        <a href="#" class="h-link"><span class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="badge">3</span></span><span class="label">Saved<strong>Wishlist</strong></span></a>
+        <a href="#" class="h-link" id="cartBtn"><span class="icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58L23 6H5.12"/></svg><span class="badge" id="cartCount">2</span></span><span class="label">My<strong>Cart</strong></span></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-strip">
+    <div class="nav-inner">
+      <button class="cat-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg> All Categories
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#flash" class="nav-link">Flash Sale<span class="hot">HOT</span></a>
+      <a href="index.html#new" class="nav-link">New Arrivals</a>
+      <a href="index.html#brands" class="nav-link">Top Brands</a>
+      <a href="shop.html" class="nav-link">Best Sellers</a>
+      <span class="nav-end">🚚 Free delivery on <strong>৳1,000+</strong></span>
+    </div>
+  </nav>
+
+  <aside class="mobile-menu" id="mobileMenu">
+    <div class="mm-head">
+      <a href="index.html" class="brand">cartly</a>
+      <button class="mm-close" id="mmClose" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="mm-body">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Best Sellers</a>
+    </div>
+  </aside>
+
+  <div class="pdp-wrap">
+    <div class="crumbs">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="shop.html">Watches &amp; Bags</a><span class="sep">/</span>
+      <a href="#">Backpacks</a><span class="sep">/</span>
+      <span>American Tourister</span>
+    </div>
+
+    <div class="pdp">
+      <div class="pdp-gallery" data-gallery>
+        <div class="thumbs">
+          <button class="active" data-thumb="https://i.postimg.cc/9Fm2z0qx/548ab76983ac4e7aac9a221150216087.avif"><img src="https://i.postimg.cc/9Fm2z0qx/548ab76983ac4e7aac9a221150216087.avif" alt="" /></button>
+          <button data-thumb="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=200&q=80" alt="" /></button>
+          <button data-thumb="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=800&q=80"><img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=200&q=80" alt="" /></button>
+          <button data-thumb="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80"><img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=200&q=80" alt="" /></button>
+        </div>
+        <div class="main-image">
+          <span class="floating-tag">FREE DELIVERY</span>
+          <img data-main src="https://i.postimg.cc/9Fm2z0qx/548ab76983ac4e7aac9a221150216087.avif" alt="American Tourister Backpack" />
+        </div>
+      </div>
+
+      <div class="pdp-info">
+        <h1>American Tourister 2 Compartment Unisex Backpack <em>(Black)</em></h1>
+        <div class="pdp-meta">
+          <span class="stars">★★★★★</span>
+          <strong>4.8</strong>
+          <span>(214 reviews)</span>
+          <span class="sep">·</span>
+          <span>19 sold</span>
+        </div>
+
+        <div class="pdp-pricebox">
+          <span class="now">1,600</span>
+          <span class="was">2,100</span>
+          <span class="off">-24% OFF</span>
+        </div>
+
+        <div class="option-block">
+          <div class="option-label"><strong>Colour</strong> · Black</div>
+          <div class="colors">
+            <button class="active" style="background:#1a1a1a" aria-label="Black"></button>
+            <button style="background:#2d4a8c" aria-label="Navy"></button>
+            <button style="background:#5a5346" aria-label="Olive"></button>
+            <button style="background:#a0263a" aria-label="Wine"></button>
+          </div>
+        </div>
+
+        <div class="option-block">
+          <div class="option-label"><strong>Quantity</strong></div>
+          <div class="qty-box">
+            <button>−</button>
+            <span class="val">1</span>
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="pdp-actions">
+          <button class="btn-primary" id="addToCart">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58L23 6H5.12"/></svg>
+            <span>Add to Cart</span>
+          </button>
+          <button class="btn-ghost">⚡ Buy Now</button>
+        </div>
+
+        <div class="usp-row">
+          <div class="usp u1"><div class="ic">🚚</div><div class="meta"><strong>Free Delivery</strong><span>2-4 working days</span></div></div>
+          <div class="usp u2"><div class="ic">↺</div><div class="meta"><strong>7-Day Returns</strong><span>No questions asked</span></div></div>
+          <div class="usp u3"><div class="ic">🛡️</div><div class="meta"><strong>1 Year Warranty</strong><span>Manufacturer</span></div></div>
+        </div>
+
+        <div class="accordion">
+          <div class="acc-item open">
+            <button class="acc-head">Description<span></span></button>
+            <div class="acc-body">A spacious, lightweight 2-compartment backpack from American Tourister. Built from durable polyester with padded shoulder straps, an internal laptop sleeve up to 15.6&quot;, and water-resistant fabric. Perfect for daily commute, college, or short travel.</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head">Specifications<span></span></button>
+            <div class="acc-body">Brand: American Tourister · Material: Polyester · Capacity: 28L · Laptop Sleeve: up to 15.6&quot; · Compartments: 2 main + 2 front pockets · Weight: 0.6 kg · Dimensions: 46 × 32 × 18 cm · Country of Origin: India</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head">Shipping &amp; Returns<span></span></button>
+            <div class="acc-body">Free delivery across Bangladesh on orders over ৳1,000. Standard delivery 2-4 working days in Dhaka, 4-7 working days outside. Cash on delivery available. 7-day easy returns if unused and in original packaging.</div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head">Reviews (214)<span></span></button>
+            <div class="acc-body">Top review: &quot;Excellent quality, exactly as pictured. Padded straps are very comfortable, and the laptop compartment fits my MacBook perfectly. Worth every taka.&quot; — Rahim · Dhaka, ★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <section class="block" style="margin-top: 22px;">
+      <div class="section-head">
+        <div>
+          <h2>You may also <em>love</em></h2>
+          <p class="head-meta">Picked from Watches &amp; Bags</p>
+        </div>
+        <a href="shop.html" class="view-all">View all
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <div class="grid-products">
+        <article class="card">
+          <div class="card-media t-pink">
+            <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+            <span class="discount-badge">-42%</span>
+            <div class="stage"><img src="https://i.postimg.cc/59pqdK5H/image-resize-(4).avif" alt="" /></div>
+          </div>
+          <div class="card-body">
+            <a href="product.html" class="card-title">Roza Retro Sunglasses for Men</a>
+            <div class="card-meta"><span class="rating-mini">4.6</span> 86 sold</div>
+            <div class="card-price"><span class="price-now">238</span><span class="price-was">410</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media t-coral">
+            <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+            <span class="discount-badge">-22%</span>
+            <div class="stage"><img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            <span class="delivery-badge">FREE DELIVERY</span>
+          </div>
+          <div class="card-body">
+            <a href="product.html" class="card-title">Leather Crossbody Bag for Women (Brown)</a>
+            <div class="card-meta"><span class="rating-mini">4.7</span> 31 sold</div>
+            <div class="card-price"><span class="price-now">1,290</span><span class="price-was">1,650</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media t-yellow">
+            <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+            <span class="bestseller-badge">Bestseller</span>
+            <div class="stage"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            <span class="delivery-badge">FREE DELIVERY</span>
+          </div>
+          <div class="card-body">
+            <a href="product.html" class="card-title">Apple Watch Series 9 Sport Band</a>
+            <div class="card-meta"><span class="rating-mini">4.9</span> 24 sold</div>
+            <div class="card-price"><span class="price-now">38,500</span><span class="price-was">46,900</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media t-mint">
+            <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+            <span class="discount-badge">-19%</span>
+            <div class="stage"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+          </div>
+          <div class="card-body">
+            <a href="product.html" class="card-title">Casio G-Shock Digital Watch GA-2100</a>
+            <div class="card-meta"><span class="rating-mini">4.9</span> 17 sold</div>
+            <div class="card-price"><span class="price-now">11,900</span><span class="price-was">14,700</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media t-mint">
+            <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+            <span class="discount-badge">-56%</span>
+            <div class="stage"><img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            <span class="delivery-badge">FREE DELIVERY</span>
+          </div>
+          <div class="card-body">
+            <a href="product.html" class="card-title">Y80 Ultra Smartwatch · BT Calling</a>
+            <div class="card-meta"><span class="rating-mini">4.4</span> 142 sold</div>
+            <div class="card-price"><span class="price-now">712</span><span class="price-was">1,600</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand">cartly</a>
+        <p>Bangladesh's friendliest online marketplace. Genuine products, easy returns, and delivery to your door, anywhere in the country.</p>
+        <div class="pay-label">We accept</div>
+        <div class="pay"><span>bKash</span><span>Nagad</span><span>Rocket</span><span>VISA</span><span>Mastercard</span><span>COD</span></div>
+      </div>
+      <div class="col"><h4>Customer Care</h4><a href="#">Help Center</a><a href="#">Track Order</a><a href="#">Returns &amp; Refunds</a><a href="#">Shipping Info</a><a href="#">Contact Us</a></div>
+      <div class="col"><h4>About Cartly</h4><a href="#">Our Story</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Sell on Cartly</a><a href="#">Affiliate Program</a></div>
+      <div class="col"><h4>Policies</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookies</a><a href="#">Anti-Counterfeit</a><a href="#">Buyer Protection</a></div>
+      <div class="foot-app">
+        <h4 style="margin-bottom: 4px;">Get the App</h4>
+        <a href="#"><span class="em">📱</span><div>Download on the<strong>App Store</strong></div></a>
+        <a href="#"><span class="em">▶</span><div>Get it on<strong>Google Play</strong></div></a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cartly Bangladesh Ltd · Dhaka, Bangladesh · Made with ♥</span>
+      <div class="socials">
+        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v6.9C18.3 21.1 22 17 22 12z"/></svg></a>
+        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+        <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.5-5.3c-.2-.9-.9-1.6-1.8-1.9C19 4.4 12 4.4 12 4.4s-7 0-8.7.4c-.9.3-1.6 1-1.9 1.9C1 8.4 1 12 1 12s0 3.6.5 5.3c.2.9 1 1.6 1.9 1.9 1.7.5 8.6.5 8.6.5s7 0 8.7-.4c.9-.3 1.6-1 1.9-1.9.4-1.7.4-5.4.4-5.4zm-13 3.4V8.6l5.8 3.4L10 15.4z"/></svg></a>
+      </div>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookies</a></span>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="Chat">💬</a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // qty buttons
+    document.querySelectorAll('.qty-box').forEach((q) => {
+      const val = q.querySelector('.val');
+      const [m, p] = q.querySelectorAll('button');
+      m.addEventListener('click', () => { val.textContent = Math.max(1, parseInt(val.textContent,10) - 1); });
+      p.addEventListener('click', () => { val.textContent = parseInt(val.textContent,10) + 1; });
+    });
+  </script>
+</body>
+</html>
