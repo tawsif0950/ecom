@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cartly · Bangladesh's friendliest marketplace. Fashion, gadgets, groceries, beauty and more with free delivery." />
+  <meta name="theme-color" content="#ff3b6b" />
+  <title>Cartly · Online Shopping in Bangladesh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.postimg.cc" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23ff3b6b'/%3E%3Cstop offset='100%25' stop-color='%23ff7a00'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='32' y='44' font-family='serif' font-style='italic' font-weight='600' font-size='42' fill='url(%23g)' text-anchor='middle'%3Ec%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="pulse"><span class="pulse-dot"></span> Live in Dhaka, Chittagong, Sylhet</span>
+        <a href="#">Track your order</a>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Sell on Cartly</a>
+        <a href="#">Help &amp; Support</a>
+        <a href="#">EN · বাংলা</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (wordmark only, no box logo) -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+
+      <a href="index.html" class="brand">cartly</a>
+
+      <form class="search" onsubmit="event.preventDefault();">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input class="search-input" type="text" placeholder="Search for products, brands and categories..." />
+        <button class="search-btn" type="submit">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>Search</span>
+        </button>
+      </form>
+
+      <div class="header-actions">
+        <a href="#" class="h-link" aria-label="Account">
+          <span class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          </span>
+          <span class="label">Hello<strong>Sign In</strong></span>
+        </a>
+        <a href="#" class="h-link" aria-label="Wishlist">
+          <span class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            <span class="badge">3</span>
+          </span>
+          <span class="label">Saved<strong>Wishlist</strong></span>
+        </a>
+        <a href="#" class="h-link" id="cartBtn" aria-label="Cart">
+          <span class="icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 2-1.58L23 6H5.12"/></svg>
+            <span class="badge" id="cartCount">2</span>
+          </span>
+          <span class="label">My<strong>Cart</strong></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav strip -->
+  <nav class="nav-strip">
+    <div class="nav-inner">
+      <button class="cat-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        All Categories
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#flash" class="nav-link">Flash Sale<span class="hot">HOT</span></a>
+      <a href="#new" class="nav-link">New Arrivals</a>
+      <a href="#brands" class="nav-link">Top Brands</a>
+      <a href="shop.html" class="nav-link">Best Sellers</a>
+      <a href="#" class="nav-link">Mobiles &amp; Tab</a>
+      <a href="#" class="nav-link">Electronics</a>
+      <a href="#" class="nav-link">Fashion</a>
+      <a href="#" class="nav-link">Home &amp; Living</a>
+      <a href="#" class="nav-link">Beauty</a>
+      <span class="nav-end">
+        🚚 Free delivery on <strong>৳1,000+</strong>
+      </span>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <aside class="mobile-menu" id="mobileMenu">
+    <div class="mm-head">
+      <a href="index.html" class="brand">cartly</a>
+      <button class="mm-close" id="mmClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mm-body">
+      <a href="#">Home</a>
+      <a href="#flash">Flash Sale</a>
+      <a href="#new">New Arrivals</a>
+      <a href="#brands">Top Brands</a>
+      <a href="shop.html">Best Sellers</a>
+      <a href="#">Mobiles &amp; Tab</a>
+      <a href="#">Electronics</a>
+      <a href="#">Fashion</a>
+      <a href="#">Home &amp; Living</a>
+      <a href="#">Beauty</a>
+      <a href="#">Sign In</a>
+      <a href="#">Help &amp; Support</a>
+    </div>
+  </aside>
+
+  <!-- Layout -->
+  <div class="layout">
+
+    <!-- Sidebar with photo thumbs -->
+    <aside class="sidebar">
+      <div class="side-head">
+        Categories
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </div>
+      <div class="side-list">
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Men's Fashion
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Women's Fashion
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Phones &amp; Accessories
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://i.postimg.cc/Y0wpdx9n/image-resize-(9).avif" alt="" /></span>
+          Computer &amp; Gaming
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://i.postimg.cc/x1jdrgRY/image-resize-(8).avif" alt="" /></span>
+          TV &amp; Home Appliances
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Home &amp; Living
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Groceries &amp; Pet
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Health &amp; Beauty
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://i.postimg.cc/5NBHWXW6/image-resize-(6).avif" alt="" /></span>
+          Lifestyle &amp; Hobbies
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://i.postimg.cc/MGTXBtM5/image-resize-(7).avif" alt="" /></span>
+          Electronic Accessories
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Watches &amp; Bags
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Sports &amp; Outdoors
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="shop.html" class="side-item">
+          <span class="ico"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=120&q=80" alt="" /></span>
+          Automotives
+          <svg class="arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <a href="#" class="app-card">
+        <img src="https://i.postimg.cc/MpH9F2hq/desktopsidebar.avif" alt="Download Cartly app" />
+      </a>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Hero slider -->
+      <div class="hero" id="hero">
+        <div class="hero-track" id="heroTrack">
+          <div class="hero-slide"><img src="https://i.postimg.cc/mZc2BtCk/image-resize-(3).avif" alt="Banner 1" /></div>
+          <div class="hero-slide"><img src="https://i.postimg.cc/dQGp2FYv/image-resize-(1).avif" alt="Banner 2" /></div>
+          <div class="hero-slide"><img src="https://i.postimg.cc/RZpDSVcw/image-resize-(2).avif" alt="Banner 3" /></div>
+        </div>
+        <button class="hero-arrow prev" id="heroPrev" aria-label="Previous">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="hero-arrow next" id="heroNext" aria-label="Next">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <div class="hero-dots" id="heroDots"></div>
+      </div>
+
+      <!-- Feature row — real icon images -->
+      <div class="feature-row">
+        <div class="feature">
+          <div class="feat-icon"><img src="https://cdn-icons-png.flaticon.com/512/66/66841.png" alt="Free Delivery" loading="lazy" /></div>
+          <div class="meta"><strong>Free Delivery</strong><span>On orders over ৳1,000</span></div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon"><img src="https://png.pngtree.com/png-vector/20230707/ourmid/pngtree-authentic-100-original-badge-vector-png-image_7481445.png" alt="100% Authentic" loading="lazy" /></div>
+          <div class="meta"><strong>100% Authentic</strong><span>Verified sellers only</span></div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon"><img src="https://icons.veryicon.com/png/o/miscellaneous/free-fish-auction-icon-library/7-days-return.png" alt="7-Day Returns" loading="lazy" /></div>
+          <div class="meta"><strong>7-Day Returns</strong><span>No questions asked</span></div>
+        </div>
+        <div class="feature">
+          <div class="feat-icon"><img src="https://cdn-icons-png.flaticon.com/512/9716/9716259.png" alt="24/7 Support" loading="lazy" /></div>
+          <div class="meta"><strong>24/7 Support</strong><span>Bengali + English</span></div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2>Shop by <em>Category</em></h2>
+            <p class="head-meta">Browse 14 popular departments</p>
+          </div>
+          <a href="#" class="view-all">View all
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+        <div class="cats">
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Men's Fashion</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://i.postimg.cc/Y0wpdx9n/image-resize-(9).avif" alt="" /></span>
+            <span class="cat-name">Computer &amp; Gaming</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Home &amp; Living</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Groceries &amp; Pet Supplies</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Health &amp; Beauty</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Women's Fashion</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://i.postimg.cc/x1jdrgRY/image-resize-(8).avif" alt="" /></span>
+            <span class="cat-name">TV &amp; Home Appliances</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://i.postimg.cc/5NBHWXW6/image-resize-(6).avif" alt="" /></span>
+            <span class="cat-name">Lifestyle &amp; Hobbies</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://i.postimg.cc/MGTXBtM5/image-resize-(7).avif" alt="" /></span>
+            <span class="cat-name">Electronic Accessories</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Watches &amp; Bags</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Sports &amp; Outdoors</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Mother &amp; Baby</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Automotives &amp; Motorbikes</span>
+          </a>
+          <a href="shop.html" class="cat">
+            <span class="cat-circle"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=400&q=80" alt="" /></span>
+            <span class="cat-name">Phones &amp; Accessories</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Flash Sale -->
+      <section class="flash" id="flash">
+        <div class="flash-head">
+          <div class="flash-title"><span class="bolt"><img src="https://cdn-icons-png.magnific.com/512/6688/6688164.png" alt="" loading="lazy" /></span> FLASH SALE</div>
+          <div class="timer">
+            <span style="margin-right:6px; font-size:12px; font-weight:500; opacity:0.85;">Ends in</span>
+            <span class="digit" id="th">05</span><span class="colon">:</span>
+            <span class="digit" id="tm">17</span><span class="colon">:</span>
+            <span class="digit" id="ts">59</span>
+          </div>
+          <a href="shop.html" class="flash-shop">Shop More
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="flash-track">
+          <article class="card">
+            <div class="card-media t-blue">
+              <button class="fav-btn" aria-label="Save"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-24%</span>
+              <div class="stage"><img src="https://i.postimg.cc/9Fm2z0qx/548ab76983ac4e7aac9a221150216087.avif" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">American Tourister 2 Compartment Unisex Backpack (Black)</a>
+              <div class="card-meta">19 sold <span class="bar" style="--p:60%"></span></div>
+              <div class="card-price"><span class="price-now">1,600</span><span class="price-was">2,100</span><span class="price-off">-24%</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-pink">
+              <button class="fav-btn" aria-label="Save"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-42%</span>
+              <div class="stage"><img src="https://i.postimg.cc/59pqdK5H/image-resize-(4).avif" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Roza Retro Sunglasses for Men · UV400 Protection</a>
+              <div class="card-meta">86 sold <span class="bar" style="--p:84%"></span></div>
+              <div class="card-price"><span class="price-now">238</span><span class="price-was">410</span><span class="price-off">-42%</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-yellow">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-30%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Ray Vision Polarized Aviator Sunglasses</a>
+              <div class="card-meta">12 sold <span class="bar" style="--p:18%"></span></div>
+              <div class="card-price"><span class="price-now">490</span><span class="price-was">700</span><span class="price-off">-30%</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-mint">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-56%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Y80 Ultra Smartwatch · Bluetooth Calling, HR Monitor</a>
+              <div class="card-meta">142 sold <span class="bar" style="--p:90%"></span></div>
+              <div class="card-price"><span class="price-now">712</span><span class="price-was">1,600</span><span class="price-off">-56%</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-purple">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-30%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">LED Light Bulb 3-Wire Driver + SMD Set</a>
+              <div class="card-stock low">⚡ Limited Stock!</div>
+              <div class="card-price"><span class="price-now">105</span><span class="price-was">150</span><span class="price-off">-30%</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-peach">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-15%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">SoundCore X10 Wireless Bluetooth Headphone</a>
+              <div class="card-meta">38 sold <span class="bar" style="--p:48%"></span></div>
+              <div class="card-price"><span class="price-now">1,180</span><span class="price-was">1,390</span><span class="price-off">-15%</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Promo banner row -->
+      <div class="banner-row">
+        <a href="#" class="banner-card"><img src="https://i.postimg.cc/dQGp2FYv/image-resize-(1).avif" alt="" /></a>
+        <a href="#" class="banner-card"><img src="https://i.postimg.cc/RZpDSVcw/image-resize-(2).avif" alt="" /></a>
+      </div>
+
+      <!-- Just for You -->
+      <section class="block block-accent" id="new">
+        <div class="section-head">
+          <div>
+            <h2>Just for <em>You</em> <span class="pill">Personalized</span></h2>
+            <p class="head-meta">Picked based on what you've been browsing</p>
+          </div>
+          <a href="shop.html" class="view-all">See more
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="grid-products">
+          <article class="card">
+            <div class="card-media t-blue">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-24%</span>
+              <div class="stage"><img src="https://i.postimg.cc/9Fm2z0qx/548ab76983ac4e7aac9a221150216087.avif" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">American Tourister 2 Compartment Unisex Backpack (Black)</a>
+              <div class="card-meta"><span class="rating-mini">4.8</span> 19 sold</div>
+              <div class="card-price"><span class="price-now">1,600</span><span class="price-was">2,100</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-pink">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-42%</span>
+              <div class="stage"><img src="https://i.postimg.cc/59pqdK5H/image-resize-(4).avif" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Roza Retro Sunglasses for Men</a>
+              <div class="card-meta"><span class="rating-mini">4.6</span> 86 sold</div>
+              <div class="card-price"><span class="price-now">238</span><span class="price-was">410</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-yellow">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="bestseller-badge">Bestseller</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Apple Watch Series 9 Sport Band 44mm</a>
+              <div class="card-meta"><span class="rating-mini">4.9</span> 24 sold</div>
+              <div class="card-price"><span class="price-now">38,500</span><span class="price-was">46,900</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-mint">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Nike Air Max 270 Running Shoes (Red)</a>
+              <div class="card-meta"><span class="rating-mini">4.7</span> 62 sold</div>
+              <div class="card-price"><span class="price-now">9,890</span><span class="price-was">12,500</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-purple">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-12%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">iPhone 15 Pro Max 256GB · Natural Titanium</a>
+              <div class="card-meta"><span class="rating-mini">5.0</span> 9 sold</div>
+              <div class="card-price"><span class="price-now">169,000</span><span class="price-was">192,000</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-peach">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-35%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Trendy Vintage Aviator Sunglasses</a>
+              <div class="card-meta"><span class="rating-mini">4.5</span> 54 sold</div>
+              <div class="card-price"><span class="price-now">320</span><span class="price-was">490</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-grey">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Bose QuietComfort Earbuds II Wireless</a>
+              <div class="card-meta"><span class="rating-mini">4.8</span> 21 sold</div>
+              <div class="card-price"><span class="price-now">22,500</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-coral">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-22%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Leather Crossbody Bag for Women (Brown)</a>
+              <div class="card-meta"><span class="rating-mini">4.7</span> 31 sold</div>
+              <div class="card-price"><span class="price-now">1,290</span><span class="price-was">1,650</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-mint">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-19%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Casio G-Shock Digital Watch GA-2100</a>
+              <div class="card-meta"><span class="rating-mini">4.9</span> 17 sold</div>
+              <div class="card-price"><span class="price-now">11,900</span><span class="price-was">14,700</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-pink">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-50%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Maybelline Lipstick Set · 4 Pieces Combo</a>
+              <div class="card-meta"><span class="rating-mini">4.8</span> 94 sold</div>
+              <div class="card-price"><span class="price-now">450</span><span class="price-was">900</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Top Brands -->
+      <section class="block" id="brands">
+        <div class="section-head">
+          <div>
+            <h2>Top Brands <em>This Week</em></h2>
+            <p class="head-meta">Most ordered across Bangladesh</p>
+          </div>
+          <a href="shop.html" class="view-all">View all
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+
+        <div class="grid-products">
+          <article class="card">
+            <div class="card-media t-grey">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-10%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">MacBook Air M3 13&quot; · 256GB Silver</a>
+              <div class="card-meta"><span class="rating-mini">4.9</span> 5 sold</div>
+              <div class="card-price"><span class="price-now">142,500</span><span class="price-was">158,000</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-yellow">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-25%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Nike Pegasus 40 Men's Running Shoes</a>
+              <div class="card-meta"><span class="rating-mini">4.7</span> 28 sold</div>
+              <div class="card-price"><span class="price-now">8,290</span><span class="price-was">11,000</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-blue">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-18%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Samsung Galaxy A55 5G · 256GB</a>
+              <div class="card-meta"><span class="rating-mini">4.6</span> 14 sold</div>
+              <div class="card-price"><span class="price-now">42,990</span><span class="price-was">52,000</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-purple">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-30%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Polarized Square Frame Sunglasses (Black)</a>
+              <div class="card-meta"><span class="rating-mini">4.5</span> 73 sold</div>
+              <div class="card-price"><span class="price-now">385</span><span class="price-was">550</span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media t-mint">
+              <button class="fav-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+              <span class="discount-badge">-21%</span>
+              <div class="stage"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="" /></div>
+              <span class="delivery-badge">FREE DELIVERY</span>
+            </div>
+            <div class="card-body">
+              <a href="product.html" class="card-title">Fitbit Charge 6 Health &amp; Fitness Tracker</a>
+              <div class="card-meta"><span class="rating-mini">4.7</span> 11 sold</div>
+              <div class="card-price"><span class="price-now">14,500</span><span class="price-was">18,400</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Trust strip — gradient bubble icons -->
+      <section class="trust">
+        <div class="trust-item ti-1">
+          <div class="ico">💵</div>
+          <div><strong>Cash on Delivery</strong><span>Available across Bangladesh</span></div>
+        </div>
+        <div class="trust-item ti-2">
+          <div class="ico">🔒</div>
+          <div><strong>Secure Payment</strong><span>SSL encrypted checkout</span></div>
+        </div>
+        <div class="trust-item ti-3">
+          <div class="ico">🛡️</div>
+          <div><strong>Buyer Protection</strong><span>Refund guarantee</span></div>
+        </div>
+        <div class="trust-item ti-4">
+          <div class="ico">📞</div>
+          <div><strong>24/7 Help Center</strong><span>09678-CARTLY (227-859)</span></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand">cartly</a>
+        <p>Bangladesh's friendliest online marketplace. Genuine products, easy returns, and delivery to your door, anywhere in the country.</p>
+        <div class="pay-label">We accept</div>
+        <div class="pay">
+          <span>bKash</span><span>Nagad</span><span>Rocket</span><span>VISA</span><span>Mastercard</span><span>COD</span>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Customer Care</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Track Order</a>
+        <a href="#">Returns &amp; Refunds</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>About Cartly</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Sell on Cartly</a>
+        <a href="#">Affiliate Program</a>
+      </div>
+      <div class="col">
+        <h4>Policies</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookies</a>
+        <a href="#">Anti-Counterfeit</a>
+        <a href="#">Buyer Protection</a>
+      </div>
+      <div class="foot-app">
+        <h4 style="margin-bottom: 4px;">Get the App</h4>
+        <a href="#">
+          <span class="em">📱</span>
+          <div>Download on the<strong>App Store</strong></div>
+        </a>
+        <a href="#">
+          <span class="em">▶</span>
+          <div>Get it on<strong>Google Play</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cartly Bangladesh Ltd · Dhaka, Bangladesh · Made with ♥</span>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v6.9C18.3 21.1 22 17 22 12z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.6-.5-5.3c-.2-.9-.9-1.6-1.8-1.9C19 4.4 12 4.4 12 4.4s-7 0-8.7.4c-.9.3-1.6 1-1.9 1.9C1 8.4 1 12 1 12s0 3.6.5 5.3c.2.9 1 1.6 1.9 1.9 1.7.5 8.6.5 8.6.5s7 0 8.7-.4c.9-.3 1.6-1 1.9-1.9.4-1.7.4-5.4.4-5.4zm-13 3.4V8.6l5.8 3.4L10 15.4z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 14.2c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1s-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5s.1-.4 0-.5-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1-1.1 2.5 1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4c1.5.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+      </div>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookies</a></span>
+    </div>
+  </footer>
+
+  <a href="#" class="chat-fab" aria-label="Chat">💬</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
